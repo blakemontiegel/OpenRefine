@@ -14,3 +14,13 @@
     </table>
   </div>
 </form>
+
+<script>
+    //finds the element with the bind="urlInput" attribute
+    const urlInput = document.querySelector("input[bind='urlInput']");
+    //attaches an event listener to the urlInput element, so whenever a user interacts with the element and its value changes, this function inside gets triggered
+    urlInput.addEventListener("change", function () {
+        //trims any white space at the end of a provided URL
+        this.value = this.value.trim();
+    });
+</script>
